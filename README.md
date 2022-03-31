@@ -60,6 +60,7 @@ Automatization takes place three times per day, each of which we keep a history 
 |12:00|morning_measurements.txt|
 |16:00|noon_measurements.txt|
 |20:00|night_measurements.txt|
+
 Every time that arrives the time to take the measurements:
 1. Take the new data from the scanning (*evaluations<sub>new</sub>*)
 2. Load the old data from the corresponding history log file (*evaluations<sub>old</sub>*)
