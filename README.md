@@ -54,4 +54,18 @@ The formula we use to evaluate every channel is:
 
 channel<sub>neighevaluator</sub> = 0.7 ∗ channel<sub>i</sub> + 0.3 ∗ (0.5 ∗ channel<sub>i−1</sub> + 0.5 ∗ channel<sub>i+1</sub>)
 ### History log
-to be continued...
+Automatization takes place three times per day, each of which we keep a history log.
+|Time|History log file name|
+|--|--|
+|12:00|morning_measurements.txt|
+|16:00|noon_measurements.txt|
+|20:00|night_measurements.txt|
+Every time that arrives the time to take the measurements:
+1. Take the new data from the scanning (*evaluations<sub>new</sub>*)
+2. Load the old data from the corresponding history log file (*evaluations<sub>old</sub>*)
+3. Write the new history log back to the corresponding history log file following the formula below:
+
+history<sub>evaluations</sub> = 0.8 * evaluations<sub>new</sub> + 0.2 * evaluations<sub>old</sub>
+
+### Code demonstration
+For a quick demonstration of the script and algorithm, check the [demonstration_ENG.pdf](https://github.com/Apipilikas/WiFiAnalyzer/blob/main/demonstration_ENG.pdf) file.
