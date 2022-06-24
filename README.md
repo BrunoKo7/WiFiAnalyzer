@@ -16,7 +16,7 @@ This is the project for the cource Wireless Network and Mobile Communication at 
 + Crontab
 ## File compilation
    ~~~~
-   >!< Please make sure you run the script in Kali Linux environment and your wifi adapter supports MONITOR MODE. >!<
+   >!< Please make sure you run the script in a *NIX environment and your wifi adapter supports MONITOR MODE. >!<
    ~~~~
 1. Open the command line and set the directory to the one that contains the project
 2. Use the airmon-ng tool to change the wifi interface from Managed mode to Monitor mode. This can be accomplished by running the command `airmon-ng start wlan0`
